@@ -1,0 +1,15 @@
+{
+  "name": "backend-master",
+  "version": "1.0.0",
+  "description": "master backend with chai our code",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
