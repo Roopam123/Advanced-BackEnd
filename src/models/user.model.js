@@ -51,16 +51,19 @@ const userSchema = new Schema(
   }
 );
 
+// For the bcrypt the password
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
   this.password = bcrypt.hash(this.password, 10);
   next();
 });
 
+// For the compare the password with the bcrypt password
 userSchema.methods.isPasswordCurrect = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
+// For the generation the AccessToken
 userSchema.methods.generateAccessToken = function () {
   jwt.sign(
     {
@@ -76,6 +79,7 @@ userSchema.methods.generateAccessToken = function () {
   );
 };
 
+// For the generation the ReafreshToken
 userSchema.methods.generateRefreshToken = function () {
   jwt.sign(
     {
