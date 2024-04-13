@@ -4,35 +4,7 @@ const asyncHandler = (requestHandler) => {
   };
 };
 
-
-export {asyncHandler};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export { asyncHandler };
 
 // Secound Approch
 // const asyncHandeler = (fn) => async (req,res,next) => {
