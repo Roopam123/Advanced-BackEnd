@@ -9,7 +9,7 @@ app.use(cors({
     origin:process.env.CORS_ORIGIN,
     credentials:true
 }));
-app.use(express.json({limit:`${process.env.LIMIT_DATA}`}));
+app.use(express.json({limit:"1tb"}));
 app.use(express.urlencoded({extended:true,limit:`${process.env.LIMIT_DATA}`}));
 app.use(express.static("public"));
 app.use(cookieParser());
