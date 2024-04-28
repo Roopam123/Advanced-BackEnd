@@ -51,6 +51,7 @@ const userSchema = new Schema(
   }
 );
 
+
 // For the bcrypt the password
 // jab hum save karenge tub hamara password increapt hoga
 userSchema.pre("save", async function (next) {
